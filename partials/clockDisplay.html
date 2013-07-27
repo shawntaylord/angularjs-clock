@@ -1,0 +1,15 @@
+<div class="clockHolder">
+	<svg viewBox="0, 0, 400, 400">
+		<g transform="translate(200,200)">
+			<circle class="circle" r="150px" fill="transparent" stroke-width="2px" stroke="black"></circle>
+			<line ng-repeat="r in minorLines" class="minor" y1="140px" y2="130px" transform="rotate({{ r }})"></line>
+			<line ng-repeat="r in majorLines" class="major" y1="138px" y2="132px" transform="rotate({{ r }})"></line>
+			<line class="minute" y1="5px" y2="-110px" transform="rotate({{ minuteHand }})"></line>
+			<line class="hour" y1="5px" y2="-50px" transform="rotate({{ hourHand }})"></line>
+			<g transform="rotate({{ secondHand }})">
+				<line class="counterweight" y1="13px" y2="28px"></line>
+				<line class="second" y1="17px" y2="-125px"></line>
+			</g>
+		</g>
+	</svg>
+</div>

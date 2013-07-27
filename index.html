@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="clockApp">
+<head>
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/foundation.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="DateCtrl">
+	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+		<div class="flipper">
+			<div class="front">
+				<div class="clock-container">
+					<clock></clock>
+				</div>
+			</div>
+			<div class="back">
+				<display></display>
+			</div>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

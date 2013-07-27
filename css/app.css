@@ -1,0 +1,139 @@
+body, html {
+	font-size: 24px !important;
+	font-family: 'Roboto', sans-serif !important;
+	background-color: #46637E !important;
+}
+
+.c {
+	margin: 1em 0;
+}
+
+.minor {
+	stroke-width: 3;
+	stroke: rgb(153, 153, 153);
+}
+
+.major {
+	stroke-width: 7;
+	stroke: rgb(0, 0, 0);
+}
+
+.minute, .hour {
+	stroke-width: 3;
+	stroke: rgb(0, 0, 0);
+}
+
+.second {
+	stroke-width: 2;
+	stroke: red;
+}
+
+.counterweight {
+	stroke-width: 6;
+	stroke:red;
+}
+.circle {
+	stroke: #222;
+	fill: #fff;
+}
+
+.left, .right {
+	float: left;
+ 	width: 50%;
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+
+.clock-container {
+	width: 400px;
+	margin: auto;
+}
+
+.dateHolder {
+	font-size: 1em;
+	font-family: inherit !important;
+	background-color: #D5EAFF;
+	width: 400px;
+	height: 400px;
+	padding: 0.25em;
+	border-radius: 3px;
+	box-shadow: 0px 1px 7px 1px #222;
+}
+
+.title {
+	font-family: inherit !important;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+.wraparound {
+	position:relative;
+	padding: 20px 30px;
+	margin: 0 125px 0 -16px;
+	background-color: #004B7E;
+	box-shadow: 0px 1px 2px 1px #222;
+}
+.wraparound:before {
+	content:" ";
+	border-top: 10px solid #000;
+	border-left: 10px solid transparent;
+	position:absolute;
+	bottom:-10px;
+	left: 0;
+}
+
+.clockHolder {
+	background-color: #D5EAFF;
+	border-radius: 3px;
+	height: 400px;
+	box-shadow: 0px 1px 7px 1px #222;
+}
+
+.flip-container {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	margin: 40px auto;
+}
+/* flip the pane when hovered */
+.flip-container:hover > .flipper {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+.flip-container, .flipper, .front, .back {
+	width: 400px;
+	height: 400px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility:hidden;
+	-webkit-backface-visibility:hidden; /* Chrome and Safari */
+	-moz-backface-visibility:hidden; /* Firefox */
+	-ms-backface-visibility:hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
